@@ -1,0 +1,600 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+@import "base"
+
+
+// Пользовательские стили
+.top-row
+	background-color: #636363
+	padding-top: 25px
+	padding-bottom: 5px
+	font-size: rem(10)
+	color: #d7d7d7
+	a
+		font-size: rem(10)
+		color: #d7d7d7
+	span
+		color: #fff	
+	&-lang
+		text-align: right
+		a
+			color: #fff
+			font-weight: bold
+
+.top-menu
+	input, label
+		display: none
+	nav
+		ul
+			list-style-type: none
+			width: 100%
+			display: flex
+			justify-content: flex-start
+			padding-inline-start: 0px
+			li
+				a
+					color: #464646
+					text-decoration: none
+					padding: 6px 18px
+					transition: all ease 0.2s
+					&:hover
+						color: #3f3434
+						background-color: RGBA(219, 214, 214, 0.5)
+	&-items
+		height: 100%
+		display: flex
+		justify-content: space-between
+		align-items: center
+		&-one
+			width: 17px
+			height: 19px
+			background-position: 50%
+			background-repeat: no-repeat
+		.search
+			background-image: url(/img/search.png)
+		.user
+			background-image: url(/img/user.png)
+		.wishlist
+			background-image: url(/img/wishlist.png)
+		.cart
+			background-image: url(/img/shopping_cart.png)
+			position: relative
+			.number-of-goods
+				display: block
+				position: absolute
+				top: -5px
+				right: -5px
+				width: 15px
+				height: 15px
+				border-radius: 50%
+				background-color:  #00c8c8
+				text-align: center
+				font-size: rem(9)
+				line-height: 15px
+				color: #fff
+		&-price-cart
+			margin-left: -5%
+			font-size: rem(11)
+			font-weight: bold
+			text-decoration: none
+			color: inherit
+		a:hover
+			background-color: RGBA(219, 214, 214, 0.5)
+
+.home-slider
+	img
+		max-width: 100%
+	.slogan
+		font-family: "Open Sans"
+		color: #31415c
+		font-weight: 800
+		line-height: rem(72)
+		text-transform: uppercase
+	.slogan-2
+		font-size: rem(72)
+		text-transform: none
+	.offer
+		margin: 30px 0
+		color: #252525
+		font-weight: 200
+		font-style: italic
+		line-height: 1.5
+		letter-spacing: -0.5px
+	.banner
+		display: block
+	&-text
+		height: 100%
+		display: flex
+		flex-direction: column
+		justify-content: center
+
+.advantage
+	&-item
+		display: flex
+		align-items: center
+		&-img
+			width: 70px
+			height: 35px
+			background-color: transparent
+			background-repeat: no-repeat
+			background-position: 50%
+		.shipping
+			background-image: url("/img/free_shiping.png")
+		.support
+			background-image: url("/img/support.png")
+		.return
+			background-image: url("/img/return.png")
+		.payment
+			background-image: url("/img/payment.png")
+		&-description
+			.upper-line
+				font-weight: bold
+				text-transform: uppercase
+			.down-line
+				color: #898989
+				font-size: rem(12)
+				font-weight: light
+
+.new-arrivals
+	&-block
+		overflow: hidden
+		.text
+			position: absolute
+			top: 15%
+			width: 45%
+			.h2
+				font-family: "Open Sans", sans-serif
+				font-size: rem(30)
+				font-weight: 800
+				text-transform: uppercase
+				line-height: rem(24)
+				letter-spacing: -1px
+				span
+					font-weight: bold
+					letter-spacing: 0px
+					line-height: normal
+				.small
+					font-size: rem(14)
+			.description
+				display: inline-block
+				width: 80%
+				margin-bottom: 15px
+				color: #636363
+				font-weight: lighter
+				font-size: rem(12)
+	&-left .text
+		right: 30px
+		text-align: right
+		.marked-text
+			color: #ff0036
+	&-right .text
+		left: 30px
+		text-align: left
+		.marked-text
+			color: #00b8b8
+		
+.offer-banner-1
+	.text
+		padding-top: 7%
+		padding-left: 5%
+		padding-bottom: 9%
+	.h1
+		font-size: rem(36)
+		font-weight: bold
+		color: #00c8c8
+		line-height: 1
+		margin-bottom: 12px
+		text-transform: uppercase
+		.marked
+			font-size: rem(12)
+			font-weight: 900
+			color: #f7941d
+			letter-spacing: 1px
+	.description
+				width: 80%
+				margin-bottom: 15px
+				color: #636363
+				font-weight: lighter
+				font-size: rem(12)
+
+.offer-banner-2
+	.h1
+		margin-top: 4%
+		margin-bottom: 2%
+		font-size: rem(18)
+		font-weight: 900
+		text-transform: uppercase
+		letter-spacing: 2px
+		line-height: rem(16)
+		.marked
+			font-size: rem(24)
+			font-weight: 200
+			letter-spacing: 6px
+			line-height: rem(48)
+		.big
+			font-size: rem(60)
+			letter-spacing: -2px
+			line-height: rem(48)
+
+.about
+	.bg-color
+		padding-right: 0 
+	.text
+		height: 100%
+		padding: 65px 70px 0
+		background-color: #96dbc9
+		background-clip: border-box
+		text-align: center
+		.h1
+			font-size: rem(30)
+			font-weight: 900
+			color: #31353d
+			text-transform: uppercase
+			letter-spacing: 2px
+			line-height: 1
+			&::after
+				content: ""
+				display: block
+				width: 50px
+				height: 1px
+				border-top: 1px solid #31353d
+				margin: 20px auto 30px
+		.description-about
+			font-size: rem(12)
+			font-weight: 200
+			line-height: 3
+			letter-spacing: 1.75px
+			color: #31353d
+			margin-bottom: 40px
+	.bg-img
+		padding-left: 0
+		overflow: hidden
+		img
+			display: block
+			max-width: 100%
+
+.bestseller-products
+	position: relative
+	z-index: 0
+	.bestseller-banner
+		display: block
+		width: 100%
+		height: 100%
+		text-align: right
+		.img
+			display: block
+			position: absolute
+			top: 0
+			z-index: 0
+		&-offer
+			position: relative
+			padding-top: 25px 
+			padding-right: 45px 
+			z-index: 2
+			font-size: rem(30)
+			font-family: 'BigNoodleTitling-store'
+			color: #00c8c8
+			letter-spacing: 4px
+			text-transform: uppercase
+			line-height: 1
+			
+		&-sale
+			position: relative
+			padding-right: 45px
+			z-index: 2
+			font-size: rem(72)
+			font-family: 'BigNoodleTitling-store'
+			color: #00c8c8
+			line-height: 1
+			opacity: 0.5
+		&-link
+			position: absolute
+			top: 80px
+			right: 110px
+			z-index: 5
+			font-size: rem(12)
+			font-weight: 200
+			color: #252525
+			text-transform: uppercase
+
+.section
+	margin-top: 30px
+
+.catalog-product-item
+	&-img
+		position: relative
+		min-height: 350px
+		background-color: #f1f1f1
+		display: flex
+		justify-content: center
+		align-content: center
+		overflow: hidden
+		img
+			display: block
+			max-width: 100%
+		&:hover .hidden-cart
+			bottom: 35px
+			
+	&-label
+		position: absolute
+		top: 15px
+		left: -15px
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 50px
+		height: 20px
+		transform: rotate(90deg)
+		font-size: rem(10)
+		font-weight: lighter
+		letter-spacing: 1px
+	.hot
+		background-color: #ffff00
+		color: #ff0000
+		&::after
+			content: "HOT"
+	.sale
+		background-color: #ed1c24
+		color: #ffffff
+		&::after
+			content: "SALE"	
+	.new
+		background-color: #00c8c8
+		color: #ffffff
+		&::after
+			content: "NEW"
+	&-description
+		margin: 15px 0 30px
+		.catalog-product-item
+			&-name
+				font-size: rem(14)
+				font-weight: lighter
+				color: #555555
+				letter-spacing: 1px
+			&-price
+				font-size: rem(18)
+				font-weight: 600
+				color: #252525
+				.old-price
+					font-size: rem(12)
+					font-weight: lighter
+					text-decoration: line-through
+					color: #898989
+			&-rating
+	.hidden-cart
+		position: absolute
+		bottom: -50px
+		width: 100%
+		height: 45px
+		display: flex
+		justify-content: center
+		background-color: #ffffff
+		transition: all ease 0.5s
+		.catalog-product-item-icon
+			display: block
+			width: 50px
+			height: 45px
+			background-repeat: no-repeat
+			background-position: 50%
+			&:hover
+				background-color: RGBA(0, 200, 200, 0.5)
+		.cart
+			background-image: url(/img/add_cart.png)
+		.liked
+			background-image: url(/img/wishlist.png)
+		.more
+			background-image: url(/img/view.png) 
+
+.catalog-blog-item
+	display: flex
+	flex-direction: column
+	&-description
+		margin-top: 12px
+		padding: 0 5px 20px 5px
+	&-heading
+		font-weight: 200
+		font-size: rem(16)
+		color: #252525
+	&-icons
+		display: flex
+		justify-content: flex-start
+		align-content: center
+		margin: 8px 0
+		color: #636363
+		font-size: rem(10)
+		font-weight: 200
+		a
+			display: inline-flex
+			align-content: center
+			&::before
+				display: inline-block
+				content: ""
+				width: 13px
+				height: 13px
+				margin-right: 8px
+		.date
+			padding-right: 25px
+			&::before
+				background: url(/img/calendar_blog.png) no-repeat 50%
+		.comments
+			&::before
+				background: url(/img/coments_blog.png) no-repeat 50%
+	&-anons
+		font-size: rem(12)
+		font-weight: 200
+		color: #898989
+		letter-spacing: 1px
+		margin-bottom: 20px
+
+.subscribe
+	background-repeat: no-repeat
+	background-position: 50%
+	&-offer
+		display: flex
+		flex-direction: column
+		justify-content: center
+		height: 202px
+		color: #ffffff
+		font-size: rem(12)
+		font-weight: 200
+		line-height: 1
+		span
+			font-size: rem(24)
+			font-weight: 600
+			text-transform: uppercase
+		&-text
+			padding-bottom: 25px
+
+
+	&-form
+		height: 100%
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: flex-end
+	input[type="email"]
+		width: 100%
+		height: 40px
+		padding: 5px 20px
+		font-weight: 200
+		font-size: rem(12)
+		color: #716d6d
+		letter-spacing: 1px
+		&::placeholder
+			font-weight: 200
+			font-size: rem(12)
+			color: #b7b7b7
+			letter-spacing: 1px
+	.to-shop
+		margin-top: 8px
+		padding: 8px 25px
+		font-weight: 800
+		color: #fff
+		background-color: #00c8c8
+		&::after
+			border-left: 5px solid #fff
+
+footer
+	padding: 40px 0
+	background-color: #363a42
+	a
+		font-size: rem(12)
+		font-weight: 200
+		color: #e1e1e1
+		letter-spacing: 1px
+		line-height: 2
+		&:hover
+			color: #948fb4
+	.logo
+		color: #fff
+	.footer-information
+		padding: 0 35px
+		&-text
+			padding-top: 15px
+			font-size: rem(12)
+			font-weight: 200
+			color: #868686
+			letter-spacing: 1px
+			line-height: 2
+		&-contacts
+			margin-top: 40px
+			font-size: rem(12)
+			font-weight: 200
+			color: #e1e1e1
+			letter-spacing: 1px
+			line-height: 2
+			span
+				color: #868686
+		.social
+			margin-top: 40px
+			a
+				font-size: rem(24)
+				color: #FFF
+				letter-spacing: 25px
+				& i:hover
+					color: #0065f8
+	.footer-nav
+		&-heading
+			font-size: rem(18)
+			font-weight: bold
+			color: #fff
+			letter-spacing: 1px
+			text-transform: uppercase
+			line-height: 55px
+		&-menu
+			ul
+				columns: 2
+				list-style: none
+				padding: 0
+				li
+					line-height: 50px
+					flex: 1 50px
+
+
+.products-h1
+	font-size: rem(24)
+	line-height: rem(85)
+	color: #252525
+	font-weight: 600
+	&::after
+		display: block
+		content: ""
+		height: 1px
+		width: 50px
+		background-color: #252525
+		margin: -19px 0 19px
+.h1-line
+	font-size: rem(10)
+	text-transform: uppercase
+	line-height: rem(85)
+	a
+		color: #636363
+		&:hover
+			color: #00c8c8
+	
+.logo
+	display: inline-block
+	height: 55px
+	&-text
+		position: relative
+		font-size: rem(36)
+		font-family: 'ancuu-store'
+		font-weight: bold
+		line-height: rem(40)
+		&::after
+			display: inline-block
+			position: absolute
+			bottom: 14%
+			right: 0
+			content: ""
+			width: 7px
+			height: 7px
+			background-color: #00c8c8
+			border-radius: 50%
+
+.to-shop
+	color: #111111
+	font-size: rem(10)
+	font-weight: 900
+	text-transform: uppercase
+	letter-spacing: 1px
+	transition: all ease 0.2s
+	&:hover
+		color: #31415c
+		&::after
+			border-left: 5px solid #31415c
+	&::after
+		display: inline-block
+		content: ""
+		height: 0px
+		width: 0px
+		border-top: 4px solid transparent
+		border-bottom: 4px solid transparent
+		border-left: 5px solid #111111
+		margin-left: 8px
+		transition: all ease 0.2s
+
+
+@import "media" // Всегда в конце
+
