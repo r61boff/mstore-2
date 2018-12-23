@@ -158,7 +158,7 @@
 					font-size: rem(14)
 			.description
 				display: inline-block
-				width: 80%
+				width: 100%
 				margin-bottom: 15px
 				color: #636363
 				font-weight: lighter
@@ -166,11 +166,15 @@
 	&-left .text
 		right: 30px
 		text-align: right
+		.description
+			padding-left: 20%
 		.marked-text
 			color: #ff0036
 	&-right .text
 		left: 30px
 		text-align: left
+		.description
+			padding-right: 20%
 		.marked-text
 			color: #00b8b8
 		
@@ -267,6 +271,8 @@
 			position: absolute
 			top: 0
 			z-index: 0
+			object-fit: cover
+			height: 100%
 		&-offer
 			position: relative
 			padding-top: 25px 
@@ -302,11 +308,15 @@
 	margin-top: 30px
 
 .catalog-product-item
+	height: 100%
+	display: flex
+	flex-direction: column
+	justify-content: space-between
 	&-img
 		position: relative
-		min-height: 350px
 		background-color: #f1f1f1
 		display: flex
+		flex-direction: column
 		justify-content: center
 		align-content: center
 		overflow: hidden
@@ -346,22 +356,24 @@
 			content: "NEW"
 	&-description
 		margin: 15px 0 30px
-		.catalog-product-item
-			&-name
-				font-size: rem(14)
-				font-weight: lighter
-				color: #555555
-				letter-spacing: 1px
-			&-price
-				font-size: rem(18)
-				font-weight: 600
-				color: #252525
-				.old-price
-					font-size: rem(12)
-					font-weight: lighter
-					text-decoration: line-through
-					color: #898989
-			&-rating
+	&-name
+		display: inline-block
+		height: 3rem
+		line-height: 1.2
+		font-size: rem(14)
+		font-weight: lighter
+		color: #555555
+		letter-spacing: 1px
+	&-price
+		font-size: rem(18)
+		font-weight: 600
+		color: #252525
+		.old-price
+			font-size: rem(12)
+			font-weight: lighter
+			text-decoration: line-through
+			color: #898989
+	&-rating
 	.hidden-cart
 		position: absolute
 		bottom: -50px
@@ -434,19 +446,17 @@
 		display: flex
 		flex-direction: column
 		justify-content: center
-		height: 202px
 		color: #ffffff
 		font-size: rem(12)
 		font-weight: 200
 		line-height: 1
+		margin: 65px 0
 		span
 			font-size: rem(24)
 			font-weight: 600
 			text-transform: uppercase
 		&-text
 			padding-bottom: 25px
-
-
 	&-form
 		height: 100%
 		display: flex
@@ -521,7 +531,7 @@ footer
 			color: #fff
 			letter-spacing: 1px
 			text-transform: uppercase
-			line-height: 55px
+			line-height: 4rem
 		&-menu
 			ul
 				columns: 2

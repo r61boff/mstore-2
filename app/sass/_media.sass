@@ -5,7 +5,12 @@
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
 	/**/
-
+	.about
+		.text
+			padding: 35px 35px 0
+			.description-about
+				line-height: 2
+				margin-bottom: 20px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 1024px)
@@ -17,8 +22,8 @@
 		.slogan-2
 			line-height: 1
 			font-size: 48px
-			.offer
-				margin: 15px 0
+		.offer
+			margin: 15px 0
 	.new-arrivals
 		&-block
 			.text
@@ -46,10 +51,31 @@
 					color: #636363
 					font-weight: lighter
 					font-size: rem(12)
+	.about
+		.text
+			padding-top: 40px
+			.description-about
+				line-height: 2
+				margin-bottom: 20px
+	footer
+		.footer-information
+			padding: 0 10px
+	.bestseller-products
+		.bestseller-banner
+			&-link
+				width: 100px
+				top: 28%
+				right: 40%
 
-/* Small Devices, Tablets */
-@media only screen and (max-width : 768px)
+/*  */
+@media only screen and (max-width : 996px)
 	/**/
+	.top-menu
+		nav
+			ul
+				li
+					a
+						padding: 6px 10px	
 	.new-arrivals
 		&-block
 			.text
@@ -73,15 +99,6 @@
 			text-align: left
 			.marked-text
 				color: #00b8b8
-	.top-menu
-		label
-			display: block
-			width: 40px
-			height: 40px
-			background-color: yellow
-		nav
-			ul
-				display: none
 	.offer-banner-1
 		.text
 			padding-top: 5%
@@ -94,9 +111,131 @@
 					margin-bottom: 10px
 					font-size: rem(10)
 					line-height: 1.45
+	.catalog-product-item
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		height: 100%
+		&-img
+			min-height: auto
+		&-description
+			margin-top: 0
+	.offer-banner-2
+		.h1
+			margin-top: 8%
+			font-size: rem(14)
+			line-height: 2
+			.marked
+				font-size: rem(16)
+				line-height: 3
+			.big
+				font-size: rem(32)
+				line-height: 0.8
+	.about
+		.text
+			padding: 15px
+			.description-about
+				line-height: 1.65
+				margin-bottom: 20px
+				letter-spacing: 1px
+			.h1
+				font-size: rem(24)
+				&::after
+					margin-bottom: 20px
+	.subscribe
+		&-offer
+			margin: 40px 0
+@media only screen and (max-width : 768px)
+	.top-menu
+		.hamburger 
+			display: flex
+			flex-wrap: wrap
+			flex-direction: column
+			justify-content: space-around
+			align-content: center
+			width: 40px
+			height: 40px
+			margin-top: 5px
+			.line
+				width: 30px
+				height: 4px
+				background-color: #c8384a
+				transition: all 300ms ease
+		#toogle:checked ~ .hamburger .line:nth-child(1), .hamburger:hover .line:nth-child(1) 
+			transition-delay: 0.05s
+			width: 100%
+			transform: translateY(300%) rotate(45deg)
+		#toogle:checked ~ .hamburger .line:nth-child(2), .hamburger:hover .line:nth-child(2) 
+			transition-delay: 0.05s
+			opacity: 0
+		#toogle:checked ~ .hamburger .line:nth-child(3), .hamburger:hover .line:nth-child(3) 
+			transition-delay: 0.05s
+			width: 100%
+			transform: translateY(-350%) rotate(-45deg)
+		nav
+			ul
+				visibility: hidden
+				z-index: 999
+				opacity: 0
+				margin-top: 0
+				position: absolute
+				transition: all ease 0.2s 
+				flex-direction: column
+				width: max-content
+				li
+					height: 2rem
+					line-height: 2rem
+		#toogle:checked ~ nav ul
+			visibility: visible
+			background-color: #fff
+			width: max-content
+			opacity: 1
+	.catalog-product-item
+		.hidden-cart
+			position: unset
 
-/* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px)
+/*  */
+@media only screen and (max-width : 767px)
+	
+	
+	.home-slider
+		.slogan
+			line-height: 1.5
+			margin: 5px 0
+		.slogan-2
+			line-height: 1
+			font-size: 32px
+		.offer
+			margin: 5px 0
+	.about
+		.bg-color
+			padding-right: 15px
+		.bg-img
+			padding-left: 15px
+	.subscribe
+		background-size: cover
+		background-position: 0 50%
+		&-offer
+			margin: 40px 0
+		&-form
+			margin-bottom: 30px
+	.bestseller-products
+		.bestseller-banner
+			position: absolute
+			width: 45%
+			right: 15px
+			top: -467px
+			min-height: 467px
+			overflow: hidden
+			.img
+				height: auto
+				width: 100%
+
+			&-link
+				top: 80px
+				left: 5%
+/*  */
+@media only screen and (max-width : 576px)
 	/**/
 	.section
 		margin-top: 20px
@@ -134,11 +273,15 @@
 		&-left .text
 			right: 20px
 			text-align: right
+			.description
+				padding-left: 10%
 			.marked-text
 				color: #ff0036
 		&-right .text
 			left: 20px
 			text-align: left
+			.description
+				padding-right: 10%
 			.marked-text
 				color: #00b8b8
 	.offer-banner-1
@@ -147,7 +290,7 @@
 			padding-bottom: 0
 		.h1
 			font-size: rem(20)
-			margin-bottom: 30px
+			margin-bottom: 40px
 			.marked
 				font-size: rem(10)
 		.description
@@ -155,7 +298,57 @@
 					margin-bottom: 10px
 					font-size: rem(10)
 					line-height: 1.45
-	
+	.products-h1
+		font-size: rem(24)
+		line-height: 2
+		&::after
+			margin-top: -10px
+	.offer-banner-2
+		.h1
+			margin-top: 8%
+			font-size: rem(14)
+			line-height: 2
+			.marked
+				font-size: rem(16)
+				line-height: 1
+			.big
+				font-size: rem(32)
+				line-height: 0.8
+		.to-shop
+			background-color: white
+	.bestseller-products
+		.bestseller-banner
+			top: -338px
+			min-height: 300px
+
+	.about
+		.bg-color
+			padding-right: 15px
+		.text
+			padding: 30px 25px 30px
+			.h1
+				font-size: rem(24)
+			.description-about
+				line-height: 1.65
+				margin-bottom: 20px
+		.bg-img
+			padding-left: 15px
+	.subscribe
+		background-size: cover
+		background-position: 0 50%
+		&-offer
+		&-form
+			margin-bottom: 30px
+	footer
+		.footer-information
+			padding: 0 15px
+
+		.footer-nav
+			&-menu
+				ul
+					li
+						line-height: 2.2
+
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/
@@ -165,6 +358,9 @@
 				width: 63%
 				font-size: rem(6)
 				line-height: 1.2
+	.offer-banner-1
+		.h1
+			margin-bottom: 20px
 
 /*==========  Mobile First  ==========*/
 
